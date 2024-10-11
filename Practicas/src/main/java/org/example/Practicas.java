@@ -32,8 +32,8 @@ public class Practicas {
                     int mes = diarest / 10000; //Pillo el mes
                     int ano = diarest % 10000; //Pillo el año
 
-                    if (dia == 0 || mes == 0 || ano == 0) {
-                        System.out.println("No se puede calcular el numero de la suerte, porque uno de los tres valores es igual a 0.");
+                    if (dia == 0 || mes == 0 || ano == 0 || dia > 31 || mes > 12) {
+                        System.out.println("Uno de los valores esta erroneo");
                     } else {
                         int suma1 = dia + mes + ano;
 
