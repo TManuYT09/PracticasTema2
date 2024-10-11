@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 public class Practicas {
     public void uno(){
-        System.out.println("Introduce tu fecha de nacimiento (dd/mm/aaaa):");
         Scanner entrada = new Scanner(System.in);
-        String fecha = entrada.nextLine(); //Aquí pido la fecha
-        fecha = fecha.replace("/",""); //Remplaza el caracter / por nada para poder cambiar el tipo de dato de String a Int
         int fechanum =0;
         boolean comp = true;
 
+        System.out.println("Introduce tu fecha de nacimiento (dd/mm/aaaa):");
+        String fecha = entrada.nextLine(); //Aquí pido la fecha
+        fecha = fecha.replace("/",""); //Remplaza el caracter / por nada para poder cambiar el tipo de dato de String a Int
+        
         if (fecha.contains("-")){
             System.out.println("No se permiten numeros negativos.");
         } else {
