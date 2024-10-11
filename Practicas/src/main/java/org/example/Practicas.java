@@ -11,7 +11,7 @@ public class Practicas {
         System.out.println("Introduce tu fecha de nacimiento (dd/mm/aaaa):");
         String fecha = entrada.nextLine(); //Aquí pido la fecha
         fecha = fecha.replace("/",""); //Remplaza el caracter / por nada para poder cambiar el tipo de dato de String a Int
-        
+
         if (fecha.contains("-")){
             System.out.println("No se permiten numeros negativos.");
         } else {
@@ -24,7 +24,7 @@ public class Practicas {
             }
 
             if(comp){
-                if (fecha.length()>7){
+                if (fecha.length()>8){
                     System.out.println("La fecha introducida no es válida");
                 }else {
                     //Aqui sumo el dia, mes y año
