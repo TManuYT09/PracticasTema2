@@ -37,7 +37,6 @@ public class Practicas {
                     int num4 = rest % 10; //Pillo el cuarto numero
                     int suma2 = num1 + num2 + num3 + num4;
 
-
                     System.out.println(dia + "+" + mes + "+" + ano + " = " + suma1);
                     System.out.println(num1 + "+" + num2 + "+" + num3 + "+" + num4 + " = " + suma2);
                     System.out.println("Tu número de la suerte es " + suma2);
