@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Practicas {
@@ -54,5 +55,76 @@ public class Practicas {
                 }
             }
         }
+    }
+    public void dos(){
+        Scanner entrada=new Scanner(System.in);
+        System.out.println("BIENVENIDO A LA CALCULADORA RÁPIDA");
+        boolean comp = true;
+        int num1 = 0;
+        int num2 = 0;
+
+        while (comp){
+            try {
+                System.out.println("Introduce el primer operando:");
+                num1 = entrada.nextInt();
+                comp = false;
+            }catch (InputMismatchException err){
+                System.out.println("Valor introducido no es un número");
+                entrada.nextLine();
+            }
+        }
+
+        System.out.println("Introduce el signo a aplicar (+, -, /, x, R)");
+        String ope = entrada.next();
+        comp = true;
+
+        if (ope.equals("R")){
+            comp = false;
+        }
+
+        while (comp){
+            try {
+                System.out.println("Introduce el segundo operando:");
+                num2 = entrada.nextInt();
+                comp = false;
+            }catch (InputMismatchException err){
+                System.out.println("Valor introducido no es un número");
+                entrada.nextLine();
+            }
+        }
+        int res = 0;
+        comp=true;
+
+        switch (ope){
+            case "+":
+                res = num1+num2;
+                break;
+            case "-":
+                res = num1-num2;
+                break;
+            case "/":
+                try{
+                    res = num1/num2;
+                }catch (ArithmeticException err){
+                    System.out.println("No se puede hacer "+ num1 +"/"+ num2);
+                    comp=false;
+                }
+                break;
+            case "x":
+                res = num1*num2;
+                break;
+            case "R":
+                res = (int) Math.sqrt(num1);
+                break;
+            default:
+                System.out.println("El signo "+ ope +" no se esta asignado a ninguna operación");
+                comp=false;
+                break;
+        }
+
+        if (comp){
+            System.out.println("El resultado es "+ res);
+        }
+
     }
 }
