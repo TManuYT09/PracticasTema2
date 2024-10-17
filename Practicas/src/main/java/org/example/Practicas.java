@@ -60,8 +60,8 @@ public class Practicas {
         Scanner entrada=new Scanner(System.in);
         System.out.println("BIENVENIDO A LA CALCULADORA RÁPIDA");
         boolean comp = true;
-        int num1 = 0;
-        int num2 = 0;
+        double num1 = 0;
+        double num2 = 0;
 
         while (comp){
             try {
@@ -92,7 +92,7 @@ public class Practicas {
                 entrada.nextLine();
             }
         }
-        int res = 0;
+        double res = 0;
         comp=true;
 
         switch (ope){
@@ -114,7 +114,7 @@ public class Practicas {
                 res = num1*num2;
                 break;
             case "R":
-                res = (int) Math.sqrt(num1);
+                res = Math.sqrt(num1);
                 break;
             default:
                 System.out.println("El signo "+ ope +" no se esta asignado a ninguna operación");
