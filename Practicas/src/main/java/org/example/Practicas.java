@@ -127,4 +127,21 @@ public class Practicas {
         }
 
     }
+    public void tres(){
+        Scanner entrada=new Scanner(System.in);
+        System.out.println("Introduzca ISBN:");
+        String isbn=entrada.nextLine();
+        int tot=0;
+        int num=0;
+
+        for (int i=10;i>0;i--){
+            num=Integer.valueOf(isbn.substring(i-1,i));
+            tot=tot+(i*num);
+        }
+        if (tot%11==0){
+            System.out.println("El ISBN es válido");
+        }else {
+            System.out.println("El ISBN no es válido");
+        }
+    }
 }

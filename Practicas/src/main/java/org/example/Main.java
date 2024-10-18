@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Practicas practica = new Practicas();
 //        practica.uno();
-        practica.dos();
+//        practica.dos();
+        practica.tres();
     }
 }
